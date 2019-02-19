@@ -1,0 +1,13 @@
+<p>Number of fruits: {{ fruits.length }}</p>
+<input type="text" [(ngModel)]="newFruitInput">
+<button (click)="addNewFruit()">Add fruit</button>
+<p *ngIf="fruitWasDeleted">Fruit deleted!</p>
+<ul>
+  <li
+    *ngFor="let fruit of fruits"
+  >{{ fruit }}
+  <span (click)="removeFruit(fruit)"> x </span>
+</li>
+</ul>
+<app-fruit></app-fruit>
+
